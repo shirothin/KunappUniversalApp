@@ -1,0 +1,42 @@
+﻿<Page
+	x:Class="NavigationMenuSample.Views.LandingPage"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="using:NavigationMenuSample"
+	xmlns:c="using:NavigationMenuSample.Controls"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+	mc:Ignorable="d">
+	
+	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition />
+		</Grid.RowDefinitions>
+
+		<c:PageHeader x:ConnectionId='1' x:Name="pageHeader">
+			<c:PageHeader.HeaderContent>
+				<TextBlock x:ConnectionId='2' x:Name="title" Style="{ThemeResource PageTitleTextBlockStyle}" Text="APP OVERVIEW"/>
+			</c:PageHeader.HeaderContent>
+		</c:PageHeader>
+
+		<ScrollViewer Grid.Row="1" EntranceNavigationTransitionInfo.IsTargetElement="True" Margin="12,4,0,0">
+			<StackPanel >
+				<TextBlock Style="{ThemeResource TitleTextBlockStyle}">kunapp for UWP</TextBlock>
+				<TextBlock Style="{ThemeResource BodyTextBlockStyle}" Margin="12,4">This is the shop member's app.</TextBlock>
+
+				<TextBlock Style="{ThemeResource SubtitleTextBlockStyle}" Margin="12,12,12,4">Contents</TextBlock>
+				<TextBlock Style="{ThemeResource BodyTextBlockStyle}" Margin="12,4">
+
+				</TextBlock>
+
+				<TextBlock Style="{ThemeResource SubtitleTextBlockStyle}" Margin="12,12,12,4">Menu</TextBlock>
+				<TextBlock Style="{ThemeResource BodyTextBlockStyle}" Margin="12,8"> 1) Home - Basic settings</TextBlock>
+				<TextBlock Style="{ThemeResource BodyTextBlockStyle}" Margin="12,8"> 2) Feed - Reading RSS feed</TextBlock>
+				<TextBlock Style="{ThemeResource BodyTextBlockStyle}" Margin="12,8"> 3) Teet - The shopping tweet</TextBlock>
+			</StackPanel>
+		</ScrollViewer>
+	</Grid>
+</Page>
+
